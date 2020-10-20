@@ -1,0 +1,15 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(59deg, #128cf4 38%, #254a93 59%);
+    height: 112px;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin-right: 48px;
+    font-size: 17px;
+    color: white;
+}
