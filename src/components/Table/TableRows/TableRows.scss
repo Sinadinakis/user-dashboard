@@ -1,0 +1,95 @@
+.table__body--row {
+    .table__header {
+        display: none;
+    }
+    .table__content {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 390px;
+        align-items: center;
+        justify-content: space-between;
+        height: 550px;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+        background-color: #ffffff;
+        border-radius: 16px;
+        margin-bottom: 48px;
+    }
+    .table__info {
+        z-index: 2;
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+        .table__info-column {
+            display: flex;
+            flex-direction: column;
+            p {
+                padding-bottom: 5px;
+            }
+        }
+        .table__info-column:first-child {
+            padding-right: 140px;
+            color: #819db5;
+        }
+    }
+    .table__info td:first-child {
+        color: #819db5;
+        font-size: 14px;
+        font-weight: 500px;
+    }
+    .table__info-name {
+        margin-top: 50px;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.17;
+    }
+    .table__rectangle {
+        z-index: 1;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        width: 100%;
+        height: 152px;
+        background-image: linear-gradient(to bottom, #128cf4, #254a93);
+    }
+    .table__logo {
+        background-color: #dc7a95;
+        border-radius: 50%;
+        z-index: 2;
+        margin-top: 75px;
+        width: 10vw;
+        height: 10vw;
+        text-align: center;
+        word-wrap: break-word;
+        position: absolute;
+        span {
+            font-weight: bold;
+            text-transform: uppercase;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: white;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .table__button {
+        border-top: 1px solid #e1e9fa;
+        width: 100%;
+        text-align: center;
+        button {
+            margin: 32px;
+            color: #819db5;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 0px 60px;
+            text-align: center;
+            height: 54px;
+            border-radius: 27px;
+            border: solid 2px #819db5;
+        }
+        button:hover {
+            background-color: #f96555;
+            border: solid 2px #f96555;
+            color: white;
+            opacity: 1;
+        }
+    }
+}
