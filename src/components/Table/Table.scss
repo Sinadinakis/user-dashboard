@@ -30,6 +30,9 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
 }
 
 .table__body--column {

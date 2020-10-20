@@ -5,7 +5,7 @@
     .table__content {
         display: flex;
         flex-direction: column;
-        flex-basis: 390px;
+        flex-basis: 370px;
         align-items: center;
         justify-content: space-between;
         height: 550px;
@@ -13,6 +13,15 @@
         background-color: #ffffff;
         border-radius: 16px;
         margin-bottom: 48px;
+    }
+    .table__content--add_new {
+        background-color: transparent;
+        border-radius: 30px;
+        border: dashed 4px #819db5;
+        justify-content: center;
+        color: #819db5;
+        font-size: 20px;
+        align-self: center;
     }
     .table__info {
         z-index: 2;
@@ -79,7 +88,7 @@
             color: #819db5;
             font-size: 16px;
             font-weight: 500;
-            padding: 0px 60px;
+            padding: 0px 50px;
             text-align: center;
             height: 54px;
             border-radius: 27px;

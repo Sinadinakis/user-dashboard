@@ -25,8 +25,11 @@
         background-color: #dc7a95;
         flex-basis: 0;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
         .table__content tr td:nth-child(n+3) {
+            display: none;
+        }
+        .table__header {
             display: none;
         }
     }
