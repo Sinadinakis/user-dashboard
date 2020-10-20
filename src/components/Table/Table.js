@@ -6,6 +6,7 @@ import { withRouter } from "react-router";
 import { useFetchApi } from "../../hooks/useFetchApi";
 import TableRows from "./TableColumns/TableColumns";
 import TableColumns from "./TableRows/TableRows";
+import Spinner from '../UI/Spinner/Spinner';
 
 // CSS
 import "./Table.scss";
@@ -15,41 +16,32 @@ import "./Table.scss";
 * @param {boolean} toggleButton
 * @param {Function} history coming from react-router
 */
-const Table = ({ query, toggleButton, history }) => {
-  const result = useFetchApi(
-    `https://run.mocky.io/v3/d0f9e797-2014-4525-9a15-080cff5cc837/?${query}`
-  );
+const Table = ({ toggleButton, history }) => {
+    const result = useFetchApi(`https://run.mocky.io/v3/d0f9e797-2014-4525-9a15-080cff5cc837/`);
 
-  const handleButtonClick = (id, item) => {
-    history.push({
-      pathname: `/organization/${id}`,
-      state: item,
-    });
-  };
+    const handleButtonClick = (id, item) => {
+        history.push({
+            pathname: `/organization/${id}`,
+            state: item,
+        });
+    };
 
-  const renderTableData = toggleButton ? (
-    <TableRows result={result} handleClick={handleButtonClick} />
-  ) : (
-    <TableColumns result={result} handleClick={handleButtonClick} />
-  );
+    const renderTableData = toggleButton
+        ? <TableRows result={result} handleClick={handleButtonClick} />
+        : <TableColumns result={result} handleClick={handleButtonClick} />
 
-  return result && result?.data ? (
-    <table className="table">
-      <tbody
-        className={`table__body ${
-          toggleButton ? "table__body--column" : "table__body--row"
-        }`}
-      >
-        {renderTableData}
-      </tbody>
-    </table>
-  ) : (
-    <p>No data on this list yet - We can add a loader</p>
-  );
-};
-
-Table.propTypes = {
-  query: PropTypes.string,
+    return (
+        result && result?.data ? (
+            <table className="table">
+                <tbody
+                    className={`table__body ${toggleButton ? "table__body--column" : "table__body--row"
+                        }`}
+                >
+                    {renderTableData}
+                </tbody>
+            </table>
+        ) : <Spinner />
+    )
 };
 
 export default withRouter(Table);

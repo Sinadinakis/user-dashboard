@@ -1,7 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList, faTh } from '@fortawesome/free-solid-svg-icons';
-import { isBrowser } from 'react-device-detect';
 
 import './TableHeader.scss';
 
